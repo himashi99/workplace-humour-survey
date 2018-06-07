@@ -1,0 +1,147 @@
+body {
+  margin: 0px;
+}
+
+/* defines the gradient */
+.wrapper {
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212,228,239,1);
+  background: rgba(168,124,225,1);
+  background: -moz-linear-gradient(-45deg, rgba(168,124,225,1) 0%, rgba(137,149,219,1) 20%, rgba(118,166,215,1) 48%, rgba(95,185,210,1) 67%, rgba(46,226,200,1) 96%, rgba(46,226,200,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(168,124,225,1)), color-stop(20%, rgba(137,149,219,1)), color-stop(48%, rgba(118,166,215,1)), color-stop(67%, rgba(95,185,210,1)), color-stop(96%, rgba(46,226,200,1)), color-stop(100%, rgba(46,226,200,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(168,124,225,1) 0%, rgba(137,149,219,1) 20%, rgba(118,166,215,1) 48%, rgba(95,185,210,1) 67%, rgba(46,226,200,1) 96%, rgba(46,226,200,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(168,124,225,1) 0%, rgba(137,149,219,1) 20%, rgba(118,166,215,1) 48%, rgba(95,185,210,1) 67%, rgba(46,226,200,1) 96%, rgba(46,226,200,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(168,124,225,1) 0%, rgba(137,149,219,1) 20%, rgba(118,166,215,1) 48%, rgba(95,185,210,1) 67%, rgba(46,226,200,1) 96%, rgba(46,226,200,1) 100%);
+  background: linear-gradient(135deg, rgba(168,124,225,1) 0%, rgba(137,149,219,1) 20%, rgba(118,166,215,1) 48%, rgba(95,185,210,1) 67%, rgba(46,226,200,1) 96%, rgba(46,226,200,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a87ce1', endColorstr='#2ee2c8', GradientType=1 );
+}
+
+.survey {
+  height: 870px;
+  width: 700px;
+  background-color: #fcfcfa;
+  box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
+  -webkit-box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
+  -moz-box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
+}
+
+/* title */
+h1 {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/* quote */
+#description {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+/* author of quote */
+#description span {
+  position: relative;
+  left: 100px;
+  font-style: normal;
+  font-size: 11px;
+}
+
+/* asterisk span on all items that need to be completed before submission */
+.asterisk {
+  color: red;
+  font-size: 10px;
+  padding-right: 3px;
+}
+
+/* CSS grid for each of the question sections */
+.each-question {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/* arranges elements for the firsts 3 inputs on the page */
+.basic-info {
+  margin-bottom: 20px;
+}
+
+.basic-info label {
+    grid-column: 1 / 2;
+    justify-self: right;
+    padding-right: 10px;
+}
+
+.basic-info input {
+    grid-column: 2 / 3;
+    justify-self: left;
+    width: 200px;
+}
+
+/* arranges the paragraph for the first dropdown menu */
+.current-role p {
+  justify-self: right;
+  text-align: right;
+  width: 170px;
+  padding-right: 10px;
+}
+
+/* arranges element for both dropdown menus */
+.each-question select {
+  justify-self: left;
+  align-self: center;
+  width: 200px;
+}
+
+/* arranges elements for question with radio buttons */
+.humour-scale p {
+  justify-self: right;
+  text-align: right;
+  width: 250px;
+  padding-right: 10px;
+}
+
+.humour-scale-container {
+  align-self: center;
+}
+
+/* arranges elements for second dropdown menu */
+.humour-prevent p {
+  justify-self: right;
+  text-align: right;
+  width: 170px;
+  padding-right: 10px;
+}
+
+/* arranges elements for question with checkboxes */
+.movie-selection {
+  margin-bottom: 20px;
+}
+
+.movie-selection p {
+  justify-self: right;
+  text-align: right;
+  width: 170px;
+  padding-right: 10px;
+}
+
+/* arranges elements for last question */
+.joke p {
+  justify-self: right;
+  text-align: right;
+  width: 170px;
+  padding-right: 10px;
+}
+
+.joke textarea {
+  justify-self: left;
+  align-self: center;
+  width: 200px;
+  resize: none;
+}
+
+#submit {
+  grid-column: 2 / 3;
+  width: 200px;
+}

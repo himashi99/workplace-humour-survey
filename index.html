@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="public/styles/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <title>Humour in the Workplace Survey</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="survey">
+      <h1 id="title">Humour in the Workplace</h1>
+      <p id="description">"A day without laughter is a day wasted"<br> <span>-Charlie Chaplin<span></p>
+        <div class="form-container">
+          <form id="survey-form">
+            <div class="each-question basic-info">
+              <label for="name" id="name-label"><span class="asterisk">*</span>Name:</label>
+              <input type="text" id="name" name="user_name" placeholder="Enter your name" required minlength="3">
+            </div>
+            <div class="each-question basic-info">
+              <label for="mail" id="email-label"><span class="asterisk">*</span>E-mail:</label>
+              <input type="email" id="email" name="user_mail" placeholder="Enter your Email" required>
+            </div>
+            <div class="each-question basic-info">
+              <label for="msg" id="number-label"><span class="asterisk">*</span>Age:</label>
+              <input type="number" id="number" name="user_age" placeholder="Enter your age" required min="14" max="100">
+            </div>
+
+
+            <div class="each-question current-role">
+              <p><span class="asterisk">*</span>What word best describes your current role? </p>
+              <select id="dropdown" required>
+                <option value="" hidden >Select an Option</option>
+                <option value="student">Hogwart's Student</option>
+                <option value="jedi">Jedi Master</option>
+                <option value="driver">Professional Racecar Driver</option>
+                <option value="wizard">Wizard</option>
+                <option value="ghost">Ghost Hunter</option>
+                <option value="no-response">Prefer Not to Say</option>
+              </select>
+            </div>
+
+            <div class="each-question humour-scale">
+              <p><span class="asterisk">*</span>On a scale of Ha (1) to Hahahahaha (5), how important is humour in the workplace? </p>
+              <div class="humour-scale-container">
+                <div class="choices">
+                  <input type="radio" id="humour-scale1" name="choice" value="Ha" required>
+                  <label for="humour-scale1">Ha (1)</label>
+                </div>
+                <div class="choices">
+                  <input type="radio" id="humour-scale2" name="choice" value="Haha">
+                  <label for="humour-scale2">Haha (2)</label>
+                </div>
+                <div class="choices">
+                  <input type="radio" id="humour-scale3" name="choice" value="Hahaha">
+                  <label for="humour-scale3">Hahaha (3)</label>
+                </div>
+                <div class="choices">
+                  <input type="radio" id="humour-scale4" name="choice" value="Hahahaha">
+                  <label for="humour-scale4">Hahahaha (4)</label>
+                </div>
+                <div class="choices">
+                  <input type="radio" id="humour-scale5" name="choice" value="Hahahahaha">
+                  <label for="humour-scale5">Hahahahaha (5)</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="each-question humour-prevent">
+              <p><span class="asterisk">*</span>Is there anything preventing you from using humour at work? </p>
+              <select required>
+                <option value="" hidden >Select an Option</option>
+                <option value="dont-know">I don't know how</option>
+                <option value="inappropriate">I think it's inappropriate</option>
+                <option value="busy">I'm too busy</option>
+                <option value="coworkers">My co-workers don't think I'm funny</option>
+                <option value="manager">My manager has no sense of humour</option>
+                <option value="clown">Are you kidding? I'm the office clown!</option>
+              </select>
+            </div>
+
+            <div class="each-question movie-selection">
+              <p><span class="asterisk">*</span>Do you like any of these comedies? (Select all that apply)</p>
+              <div class="checkboxes" required id="moviechoices">
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox1" name="movie-choice[]" value="Old School">
+                  <label for="movie-checkbox1">Old School</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox2" name="movie-choice[]" value="Superbad">
+                  <label for="movie-checkbox2">Superbad</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox3" name="movie-choice[]" value="Death at a Funeral">
+                  <label for="movie-checkbox3">Death at a Funeral (British Version)</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox4" name="movie-choice[]" value="Rush Hour">
+                  <label for="movie-checkbox4">Rush Hour</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox5" name="movie-choice[]" value="Meet the Parents">
+                  <label for="movie-checkbox5">Meet the Parents</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox6" name="movie-choice[]" value="Bridesmaids">
+                  <label for="movie-checkbox6">Bridesmaids</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox7" name="movie-choice[]" value="Zoolander">
+                  <label for="movie-checkbox7">Zoolander</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox8" name="movie-choice[]" value="Trading Places">
+                  <label for="movie-checkbox8">Trading Places</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox9" name="movie-choice[]" value="Snatch">
+                  <label for="movie-checkbox9">Snatch</label>
+                </div>
+                <div class="checkbox-selection" id="yo">
+                  <input type="checkbox" id="movie-checkbox10" name="movie-choice" value="checked">
+                  <label for="movie-checkbox10">I have no soul and hate all these movies</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="each-question joke">
+              <p>Tell me something funny. (A joke, a riddle or a funny story!)</p>
+              <textarea cols="50" rows="4" name="suggestions" placeholder="Enter your joke here"></textarea>
+            </div>
+
+            <div class="each-question submit-button">
+              <button id="submit">Submit</button>
+            </div>
+
+        </form> </*---------form---------*/>
+      </div> </*-----form container-----*/>
+    </div> </*---------survey---------*/>
+  </div> </*---------wrapper---------*/>
+
+  <script src="public/scripts/script.js"></script>
+
+</body>
+</html>
