@@ -33,3 +33,18 @@ p {
   color: #ffd3e0;
   font-size: 45px;
 }
+
+/*----------------------------------------------- Media Queries -------------------------------------------------------------*/
+
+@media only screen and (max-width : 400px) {
+
+.completed-survey {
+  width: 900px !important;
+}
+
+p {
+  font-size: 40px !important;
+  text-align: center;
+}
+
+}
