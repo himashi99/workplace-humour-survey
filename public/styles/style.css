@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  color: white;
 }
 
 /* defines the gradient */
@@ -22,10 +23,11 @@ body {
 .survey {
   height: 870px;
   width: 700px;
-  background-color: #fcfcfa;
+  background: transparent;
+  /* background-color: #fcfcfa;
   box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
   -webkit-box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
-  -moz-box-shadow: 6px 6px 16px 0px rgba(201,201,201,1);
+  -moz-box-shadow: 6px 6px 16px 0px rgba(201,201,201,1); */
 }
 
 /* title */
@@ -62,6 +64,12 @@ h1 {
   grid-template-columns: 300px 1fr;
 }
 
+/* placeholder text */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffd3e0;
+    opacity: 1; /* Firefox */
+}
+
 /* arranges elements for the firsts 3 inputs on the page */
 .basic-info {
   margin-bottom: 20px;
@@ -77,6 +85,9 @@ h1 {
     grid-column: 2 / 3;
     justify-self: left;
     width: 200px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
 }
 
 /* arranges the paragraph for the first dropdown menu */
@@ -85,6 +96,15 @@ h1 {
   text-align: right;
   width: 170px;
   padding-right: 10px;
+}
+
+.dropdown {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer
 }
 
 /* arranges element for both dropdown menus */
@@ -124,6 +144,19 @@ h1 {
   text-align: right;
   width: 170px;
   padding-right: 10px;
+}
+
+/* bottom margin for the ast div */
+.movie-selection div:nth-child(10) {
+    margin-bottom: 15px;
+}
+
+/* error message is not displayed at first */
+.error-message {
+  width: 200px;
+  padding: 5px;
+  background-color: rgba(118,166,215,1);
+  display: none;
 }
 
 /* arranges elements for last question */

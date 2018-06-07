@@ -31,46 +31,30 @@ ageLimit.addEventListener("input", function (event) {
   }
 });
 
-function validateCheckbox() {
-        var n = $("input:checked").length;
-        if(n == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+//If no movies are selected, error message is displayed and form won't submit
+$("form").submit(function(e){
+  if ($('input:checkbox').filter(':checked').length < 1) {
+      $('.error-message').css('display','block');
+      console.log('morbo!');
+      e.preventDefault();
+  } else {
+    //open up new window with message
+    window.open("page2.html");
+    // $(".dialog-box").css({ display: "none" });
+    // alert("Congrats");
+  }
+});
 
-// var myButton = document.getElementById('submitform');
-//     myButton.onclick = function(event) {
-//         alert("hello");
-//     }
+//If user clicks on the last movie selection i.e. None of the Above, all other choices are disabled
+$(function() {
+  disable_movie();
+  $("#movie-checkbox10").click(disable_movie);
+});
 
-
-    // $(document).ready(function(){
-// var mov = document.getElementById('movie-checkbox10');
-//
-// mov.addEventListener("submit", function (event) {
-//   if ($('input:checkbox').filter(':checked').length < 1){
-//       document.getElementById('movie-checkbox10').setCustomValidity("Please select at least one");
-//   return false;
-//   }
-//
-// })
-        $("form").submit(function(){
-    		if ($('input:checkbox').filter(':checked').length < 1){
-            document.getElementById('yo').setCustomValidity("Please select at least one");
-    		return false;
-    		}
-        });
-    // });
-
-// var movieSelect = document.getElementById("improve-checkbox");
-//
-// movieSelect.addEventListener("submit", function (event) {
-//   var isChecked = $('#improve-checkbox').prop('checked');
-//   if (isChekced == false) {
-//     movieSelect.setCustomValidity("Yo");
-//   } else {
-//     email.setCustomValidity("");
-//   }
-// });
+function disable_movie() {
+  if (this.checked) {
+    $(".disabled-group").attr("disabled", true);
+  } else {
+    $(".disabled-group").removeAttr("disabled");
+  }
+}

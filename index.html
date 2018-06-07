@@ -88,46 +88,52 @@
             <div class="each-question movie-selection">
               <p><span class="asterisk">*</span>Do you like any of these comedies? (Select all that apply)</p>
               <div class="checkboxes" required id="moviechoices">
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox1" name="movie-choice[]" value="Old School">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox1" class="yo" name="movie-choice[]" value="Old School">
                   <label for="movie-checkbox1">Old School</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox2" name="movie-choice[]" value="Superbad">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox2" class="yo" name="choice[]" value="Superbad">
                   <label for="movie-checkbox2">Superbad</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox3" name="movie-choice[]" value="Death at a Funeral">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox3" class="yo" name="choice[]" value="Death at a Funeral">
                   <label for="movie-checkbox3">Death at a Funeral (British Version)</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox4" name="movie-choice[]" value="Rush Hour">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox4" class="yo" name="choice[]" value="Rush Hour">
                   <label for="movie-checkbox4">Rush Hour</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox5" name="movie-choice[]" value="Meet the Parents">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox5" name="choice[]" value="Meet the Parents">
                   <label for="movie-checkbox5">Meet the Parents</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox6" name="movie-choice[]" value="Bridesmaids">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox6" name="choice[]" value="Bridesmaids">
                   <label for="movie-checkbox6">Bridesmaids</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox7" name="movie-choice[]" value="Zoolander">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox7" name="choice[]" value="Zoolander">
                   <label for="movie-checkbox7">Zoolander</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox8" name="movie-choice[]" value="Trading Places">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox8" name="choice[]" value="Trading Places">
                   <label for="movie-checkbox8">Trading Places</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox9" name="movie-choice[]" value="Snatch">
+                <div class="checkbox-selection">
+                  <input type="checkbox" class="disabled-group" id="movie-checkbox9" name="choice[]" value="Snatch">
                   <label for="movie-checkbox9">Snatch</label>
                 </div>
-                <div class="checkbox-selection" id="yo">
-                  <input type="checkbox" id="movie-checkbox10" name="movie-choice" value="checked">
+                <div class="checkbox-selection">
+                  <input type="checkbox" id="movie-checkbox10" name="choice" value="checked">
                   <label for="movie-checkbox10">I have no soul and hate all these movies</label>
                 </div>
+
+                <!-- error message -->
+                <div class="checkbox-selection error">
+                  <span class="error-message">Please select at least one input</span>
+                </div>
+
               </div>
             </div>
 
@@ -140,10 +146,10 @@
               <button id="submit">Submit</button>
             </div>
 
-        </form> </*---------form---------*/>
-      </div> </*-----form container-----*/>
-    </div> </*---------survey---------*/>
-  </div> </*---------wrapper---------*/>
+        </form> <!--form-->
+      </div> <!--form container-->
+    </div> <!--survey-->
+  </div> <!--wrapper-->
 
   <script src="public/scripts/script.js"></script>
 
